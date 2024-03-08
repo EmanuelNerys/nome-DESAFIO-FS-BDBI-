@@ -1,0 +1,32 @@
+create database locadora_carro;
+use locadora_carro;
+
+
+CREATE TABLE locadora(
+    cnpj VARCHAR(30) PRIMARY KEY,
+    cep VARCHAR(30),
+    nome_ VARCHAR(30),
+    numero VARCHAR(30)
+);
+
+CREATE TABLE funcionarios(
+    cpf_funcionarios VARCHAR(30) PRIMARY KEY,
+    nome VARCHAR(30),
+    idade VARCHAR(30),
+    fk_locadora_cnpj VARCHAR(30)
+);
+
+CREATE TABLE clientes_(
+    cpf_clientes VARCHAR(30) PRIMARY KEY,
+    nome VARCHAR(30),
+    numero VARCHAR(30),
+    fk_locadora_cnpj VARCHAR(30)
+);
+ 
+
+insert into locadora(cnpj,cep,nome_,numero)
+values ('23344555','586928','neryslocadora','23');
+insert into funcionarios (cpf_funcionarios,nome,idade,fk_locadora_cnpj)
+values ('3445555','emanuel','18','344455');
+insert into clientes_ (cpf_clientesnome,numero,fk_locadora_cnpj)
+values ('344343','renato','232323','2323242');
